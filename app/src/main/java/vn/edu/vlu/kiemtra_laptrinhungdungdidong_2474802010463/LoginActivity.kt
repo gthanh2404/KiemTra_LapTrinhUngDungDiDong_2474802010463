@@ -16,5 +16,7 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val edtEmail = findViewById<EditText>(R.id.edtEmail)
+        val edtPassword = findViewById<EditText>(R.id.edtPassword)
     }
 }
