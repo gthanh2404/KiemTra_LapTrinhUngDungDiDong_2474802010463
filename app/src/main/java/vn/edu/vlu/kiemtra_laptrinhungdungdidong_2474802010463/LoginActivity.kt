@@ -1,5 +1,6 @@
 package vn.edu.vlu.kiemtra_laptrinhungdungdidong_2474802010463
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Patterns
@@ -12,6 +13,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class LoginActivity : AppCompatActivity() {
+
+    companion object {
+        const val EXTRA_EMAIL = "EXTRA_EMAIL"
+    }
 
     // Khai bao cac view (anh xa bang findViewById, KHONG dung ViewBinding)
     private lateinit var edtEmail: EditText
@@ -66,6 +71,11 @@ class LoginActivity : AppCompatActivity() {
             else -> {
                 tvStatus.setTextColor(Color.parseColor("#2E7D32"))
                 tvStatus.text = "Validation Successful!"
+
+                // 2.3 + 2.4. Explicit Intent chuyen sang ProfileActivity, gui kem email
+                val intent = Intent(this, ProfileActivity::class.java)
+                intent.putExtra(EXTRA_EMAIL, email)
+                startActivity(intent)
             }
         }
     }
