@@ -1,6 +1,6 @@
 # TH EXAM - CÂU 1
 
-- Họ tên: [Họ và tên sinh viên]
+- Họ tên: Nguyễn Gia Thành
 - MSSV: 2474802010463
 
 ## Minh chứng Câu 1
